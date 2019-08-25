@@ -2,12 +2,9 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtdWVsb2tlbGxvZ3VtIiwiYSI6ImNqemZnYXVzejAyM
 let map = new mapboxgl.Map({
     container: 'map',
     center: [33.2026, 0.4479], // Coordinates for Jinja City
-    zoom: 12,
+    zoom: 13,
     style: 'mapbox://styles/mapbox/dark-v10'
 });
-
-//map.scrollWheelZoom.disable();
-
 
 let places = [{
         Name: "Jinja Hospital",
@@ -211,7 +208,7 @@ places.forEach(
             .setHTML(`<h1>${place.Name}</h1>`)
 
         let marker = new mapboxgl.Marker()
-            .setLngLat([place.Location[0], place.Location[1]])
+            .setLngLat([place.Location[1], place.Location[0]])
             .setPopup(popup)
             .addTo(map)
         place.marker = marker
@@ -249,7 +246,7 @@ function onInputChange() {
 
     let regex = new RegExp(`${input.value}`, 'gi')
     places.forEach((place) => {
-        if (place.name.search(regex) !== -1) {
+        if (place.Name.search(regex) !== -1) {
             place.marker.addTo(map)
             sidebar.appendChild(place.resultElement)
         }
