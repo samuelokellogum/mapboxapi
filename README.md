@@ -6,6 +6,6 @@ There are also hospitals, schools and churches to look out for while in the grea
 #How To Install
 Running locally, Install Chrome, Mozilla Firefox or Explorer  and run the index.html file.
 
-# ChinguPrework
+# Live Site
 
 Project is live at https://s.netlify.com/
