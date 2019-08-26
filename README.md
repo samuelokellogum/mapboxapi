@@ -8,4 +8,4 @@ Running locally, Install Chrome, Mozilla Firefox or Explorer  and run the index.
 
 # Live Site
 
-Project is live at https://s.netlify.com/
+Project is live at https://5d62df0cf6428f51427c704f--heuristic-austin-231307.netlify.com/
